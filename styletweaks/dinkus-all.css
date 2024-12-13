@@ -1,0 +1,8 @@
+p[_*='***']
+, p[_*='xxxx' i]
+, p[_*='---']
+, p[_*='___']
+{
+    text-align: center;
+    margin: 1em 0;
+}
