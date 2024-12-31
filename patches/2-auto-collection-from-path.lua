@@ -1,11 +1,12 @@
--- Automatically fake-add books to collections based on first path component
+-- Automatically fake-add books to collections based on first path component (folder name)
 -- 
--- e.g. put /mnt/onboard/foo/bar/baz.epub into collection foo if home_dir is /mnt/onboard/
+-- e.g. put /mnt/onboard/foo/bar/baz.epub into collection "foo" if home_dir is /mnt/onboard/
 --
--- Doesn't actually add books to collections, but lies and says they're in one in isFileInCollection()
--- seems to be good enough for History filtering by category
--- Collection name is the first path component (relative to home_dir)
--- Collections are automatically created on startup, to populate the collections list for filtering
+-- Doesn't actually add books to collections, but patches ReadCollection:isFileInCollection() to lie and and says they're in one.
+-- ReadCollection:isFileInCollections() has not been patched, otherwise it may return true for all books. This way ☆ won't show for all books, only manual collections.
+-- This seems to be good enough for History filtering by category.
+-- Collection name is the first path component (relative to home_dir).
+-- Collections are automatically created on startup, to populate the collections list for filtering.
 
 local FileChooser = require("ui/widget/filechooser")
 local ReadCollection = require("readcollection")
