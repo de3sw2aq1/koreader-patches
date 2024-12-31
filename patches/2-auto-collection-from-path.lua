@@ -11,7 +11,7 @@
 local FileChooser = require("ui/widget/filechooser")
 local ReadCollection = require("readcollection")
 
-function starts_with(str, prefix)
+local function starts_with(str, prefix)
     return string.sub(str, 1, #prefix) == prefix
 end
 
@@ -25,6 +25,6 @@ end
 
 local isFileInCollection = ReadCollection.isFileInCollection
 ReadCollection.isFileInCollection = function (self, file, collection_name)
-    fake_collection_dir = G_reader_settings:readSetting("home_dir") .. "/" .. collection_name .. "/"
+    local fake_collection_dir = G_reader_settings:readSetting("home_dir") .. "/" .. collection_name .. "/"
     return starts_with(file, fake_collection_dir) or isFileInCollection(self, file, collection_name)
 end
