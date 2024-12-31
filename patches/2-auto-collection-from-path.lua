@@ -17,8 +17,8 @@ end
 
 local dirs, files = FileChooser:getList(G_reader_settings:readSetting("home_dir"), "access")
 for _, dir in pairs(dirs) do
-    local dir_name = string.match(dir.path, ".*/([^/]+)")
-    if ReadCollection.coll[dir_name] == nil then 
+    local dir_name = dir.text:gsub("/$", "")
+    if ReadCollection.coll[dir_name] == nil then
         ReadCollection:addCollection(dir_name)
     end
 end
