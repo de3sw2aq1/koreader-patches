@@ -4,17 +4,17 @@
 
 I use a [Kobo Clara BW](https://us.kobobooks.com/products/kobo-clara-bw) eReader running KOReader (basically exclusively, I almost never use the built-in Nickel reader at all).
 
-Because I don't use the built-in Kobo reader software at all, I have the "Kobo Reader Device Interface" and "KoboTouch Calibre plugins disabled (these plugins will mutate the epub a bit on upload and I don't want that). Instead I use the "User Defined USB driver" Calibre plugin.
+Because I don't use the built-in Kobo reader software at all, I have the "Kobo Reader Device Interface" and "KoboTouch Calibre plugins disabled (these plugins will mutate the epub a bit on upload and I don't want that). Instead, I use the "User Defined USB driver" Calibre plugin.
 
 90% of ebooks I read are downloaded with the [FanFicFare](https://github.com/JimmXinu/FanFicFare) Calibre plugin, from a variety of online fanfic and fiction websites. Notably, many stories I am reading are in-progress/incomplete, and I later re-download/update the epub and replace the existing `.epub` file on my ereader. This causes various minor issues with KOReader.
 
-I use the [KOReader calibre plugin](https://github.com/kyxap/koreader-calibre-plugin) to download KOReader metadata back to my computer, mostly reading status (completed and abandoned books). In theory this also acts as a backup of all my sidecar data (untested).
+I use the [KOReader calibre plugin](https://github.com/kyxap/koreader-calibre-plugin) to download KOReader metadata back to my computer, mostly reading status (completed and abandoned books). In theory, this also acts as a backup of all my sidecar data (untested).
 
 Below is the list of customizations I have applied to tweak KOReader to my needs and preferences, plus a bit of context as to why I use each of them.
 
 ## Userpatches by other users
 
-## [Project: Title](https://github.com/joshuacant/ProjectTitle)
+### [Project: Title](https://github.com/joshuacant/ProjectTitle)
 
 A complete redesign of the KOReader file browser/coverbrowser.
 
@@ -49,7 +49,7 @@ Automatically fake-add books to collections based on first path component (folde
 
 e.g. put `/mnt/onboard/foo/bar/baz.epub` into collection "foo" if home_dir is `/mnt/onboard/`
 
-_This is a complete hack_ and may have/cause bugs. It doesn't _actually_ add books to collections, but patches `ReadCollection:isFileInCollection()` to lie and and says they're in one.
+_This is a complete hack_ and may have/cause bugs. It doesn't _actually_ add books to collections, but patches `ReadCollection:isFileInCollection()` to lie and says they're in one.
 
 > **Why?** This is good enough for History filtering by category (folder name). I mostly don't want to manage these collections manually.
 
@@ -87,7 +87,7 @@ If a book file is newer than it's sidecar, the book was updated and may have new
 
 Implemented as a patch to `BookList.getBookInfo()` which is in-memory only (does not modify sidecar) and is cached.
 
-> **Why?** When I re-download books with FanFicFare, this makes all the updated books show as unread. Otherwise they may incorrectly show as finshed or with previous reading progress.
+> **Why?** When I re-download books with FanFicFare, this makes all the updated books show as unread. Otherwise they may incorrectly show as finished or with previous reading progress.
 
 ### [`2-search-by-author.lua`](patches/2-search-by-author.lua)
 
@@ -115,7 +115,7 @@ TODO: There are better userpatches from other users to do this, I will switch to
 
 I normally set KOReader to have no gap between paragraphs and use a text indent. This styletweak does the opposite for blockquotes though: don't indent and skip lines between paragraphs instead.
 
-> *Why?* Many FanFicFare-downloaded books include author notes using blockquotes, and this reads clearer. And many author notes are a single paragrah anyway
+> *Why?* Many FanFicFare-downloaded books include author notes using blockquotes, and this reads clearer. And many author notes are a single paragraph anyway
 
 ### [`dinkus-all.css`](styletweaks/dinkus-all.css)
 
