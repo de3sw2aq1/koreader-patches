@@ -113,7 +113,7 @@ TODO: There are better userpatches from other users to do this, I will switch to
 
 ## styletweaks
 
-### [`blockquote-paragraph-spacing.css`](styletweaks/)blockquote-paragraph-spacing.css
+### [`blockquote-paragraph-spacing.css`](styletweaks/blockquote-paragraph-spacing.css)
 
 I normally set KOReader to have no gap between paragraphs and use a text indent. This styletweak does the opposite for blockquotes though: don't indent and skip lines between paragraphs instead.
 
