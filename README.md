@@ -10,11 +10,13 @@ Because I don't use the built-in Kobo reader software at all, I have the "Kobo R
 
 I use the [KOReader calibre plugin](https://github.com/kyxap/koreader-calibre-plugin) to download KOReader metadata back to my computer, mostly reading status (completed and abandoned books). In theory, this also acts as a backup of all my sidecar data (untested).
 
+I upload my entire library of a few thousand books to my eReader, and need some tools to search through all the books. I use the [Project:Title](https://github.com/joshuacant/ProjectTitle) KOReader plugin in the list view with covers hidden. (Most books downloaded with FanFicFare don't have covers anyway. And the list view is better for navigating a long list of books.) I organize books by the following Calibre file path save tempate: `{#genre}/{series:'series_sort()'}/{title} - {authors}` (where `#genre` is a custom column for coarse grained sorting of books).
+
 Below is the list of customizations I have applied to tweak KOReader to my needs and preferences, plus a bit of context as to why I use each of them.
 
 ## Userpatches by other users
 
-### [Project: Title](https://github.com/joshuacant/ProjectTitle)
+### [Project:Title](https://github.com/joshuacant/ProjectTitle)
 
 A complete redesign of the KOReader file browser/coverbrowser.
 
