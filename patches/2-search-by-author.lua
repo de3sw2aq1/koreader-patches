@@ -7,7 +7,7 @@ This only works because I include author name in filename, and it still has fals
 I thought about doing a Calibre metadata search for author, it probably will be more accurate.
 But I don't like the Calibre search results UI as much, so this is good enough for me.
 
-Mostly LLM-written, but I tested it works. Not sure all code paths were tested though.
+This file is LLM-written, but I tested it works. Not sure all code paths were tested though.
 --]] --
 local FileManager = require("apps/filemanager/filemanager")
 local _ = require("gettext")

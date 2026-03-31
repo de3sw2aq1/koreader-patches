@@ -1,4 +1,4 @@
--- Replace the placeholder code for editing book-specific style tweaks
+-- Replace the inserted placeholder CSS when editing book-specific style tweaks
 
 -- Edit book-specific tweak to match the books section break symbol.
 -- The weird spacing in the CSS is legal, and is easier to position the cursor precisely with your finger, and edit or delete anything unneeded

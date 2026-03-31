@@ -7,6 +7,8 @@
 -- This seems to be good enough for History filtering by category.
 -- Collection name is the first path component (relative to home_dir).
 -- Collections are automatically created on startup, to populate the collections list for filtering.
+--
+-- TODO: I think https://github.com/koreader/koreader/pull/13336 can replace this, but I haven't tested it.
 
 local FileChooser = require("ui/widget/filechooser")
 local ReadCollection = require("readcollection")

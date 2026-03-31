@@ -1,7 +1,9 @@
 --[[ --
-Patch for ProjectTitle to show progress bars how I want:
-* Show progress bar always, even if hide_file_info == false
+Patch for Project:Title to show progress bars how I want:
+* Show progress bar always, even if `hide_file_info == false` (when showing file dates or sizes)
 * Except, hide the progress bar if new/finished/abandoned (only show if reading)
+
+Works well with https://github.com/igarizio/KOReader.patches/blob/main/2-projecttitle-page-count-override.lua
 --]] --
 
 local userpatch = require("userpatch")

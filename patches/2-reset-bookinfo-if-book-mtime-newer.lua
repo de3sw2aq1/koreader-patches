@@ -1,7 +1,8 @@
 --[[ --
 If a book file is newer than it's sidecar, the book was updated and may have new chapters.
 Reset a book's status to new and no percent read if detected.
-Only cached BookList value is modified, not sidecar.
+
+Implemented as a patch to `BookList.getBookInfo()` which is in-memory only (does not modify sidecar) and is cached.
 
 TODO: maybe combine 2-100-percent-finished.lua into this patch. Unsure if it needs to be set for places outside BookList though.
 --]] --
