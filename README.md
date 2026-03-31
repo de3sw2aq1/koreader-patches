@@ -117,7 +117,7 @@ TODO: There are better userpatches from other users to do this, I will switch to
 
 I normally set KOReader to have no gap between paragraphs and use a text indent. This styletweak does the opposite for blockquotes though: don't indent and skip lines between paragraphs instead.
 
-> *Why?* Many FanFicFare-downloaded books include author notes using blockquotes, and this reads clearer. And many author notes are a single paragraph anyway
+> **Why?** Many FanFicFare-downloaded books include author notes using blockquotes, and this reads clearer. And many author notes are a single paragraph anyway.
 
 ### [`dinkus-all.css`](styletweaks/dinkus-all.css)
 
@@ -126,3 +126,5 @@ Many books use a centered line of symbols like `* * *` as a section break betwee
 However, many books downloaded with FanFicFare do not style these symbols to be centered. (Often they are not centered at all on the original website, this is not a bug in FanFicFare.)
 
 This styletweak includes many common patterns, but if I need an additional one, I configure it on the fly with the template from `2-styletweak-sample-css.lua`.
+
+This uses a KOReader private CSS syntax to match paragraphs containing specific text strings. There's not a lot of docs on this but see https://github.com/koreader/koreader/issues/11323 and https://github.com/koreader/koreader/pull/11533.
